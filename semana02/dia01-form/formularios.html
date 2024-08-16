@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Formularios + Inputs + Validaciones</h1>
+
+      <form action="">
+        <label for="">
+          <input type="text" placeholder="Ingresa algun texto" />
+        </label>
+        <label for="">
+          Input(Solo lectura)
+          <input type="text" placeholder="Input de solo lectura" />
+        </label>
+        <label for="">
+          Input(desactivado)
+          <input type="text" placeholder="Input desactivado" disabled />
+        </label>
+        <label for="">
+          Input tipo number
+          <input type="number" placeholder="Edad Ej. 18" name="Edad" />
+        </label>
+
+        <label for="">
+          input Tipo email
+          <input
+            type="email"
+            name="Email"
+            id=""
+            placeholder="Correo Ej. soyyesica@gmail.com"
+          />
+        </label>
+        <label for="">
+          Input tipo range (edad)
+          <input
+            type="range"
+            name="range_edad"
+            id=""
+            min="1"
+            max="100"
+            step="10"
+          />
+        </label>
+
+        <label for="">
+          Input tipo tel
+          <input type="tel" name="" id="" placeholder="(51) 455 448 1477" />
+        </label>
+        <label for="">
+          Input tipo url
+          <input type="url" name="" id="" placeholder="sitio web" />
+        </label>
+        <label for="">
+          Input tipo password
+          <input type="password" name="" id="" placeholder="password" />
+        </label>
+        <label for="">
+          Input tipo color
+          <input type="color" name="" id="" />
+        </label>
+        <label for="">
+          Input tipo search
+          <input type="search" name="" id="" />
+        </label>
+        <label for="">
+          Input tipo file (selecciona .jpg) uno a la vez
+          <input type="file" name="" id="" accept=".jpg, .jpeg" />
+        </label>
+
+        <label for="">
+          Input tipo file (selecciona multiples archivos)
+          <input type="file" multiple />
+        </label>
+        <input type="submit" value="Guardar" />
+        <input type="reset" value="limpiar" />
+      </form>
+
+      <form action="">
+        <h2>Input tipo fecha</h2>
+
+        <label for="">
+          input tipo date (dia)
+          <input type="date" name="dia" />
+        </label>
+
+        <label for="">
+          input tipo week (semana)
+          <input type="week" name="semana" />
+        </label>
+
+        <label for="">
+          input tipo month (mes)
+          <input type="month" name="mes" />
+        </label>
+
+        <input type="submit" value="Guardar" />
+      </form>
+
+      <form action="">
+        <h2>Textarea</h2>
+
+        <label for="">
+          <textarea
+            name="biogradia1"
+            id=""
+            placeholder="Escribe una descripcion sobre ti..."
+            rows="10"
+            cols="4"
+          ></textarea>
+        </label>
+        <label for="">
+          <textarea
+            name="biogradia2"
+            id=""
+            placeholder="Escribe una descripcion sobre ti..."
+            rows="10"
+            disabled
+          ></textarea>
+        </label>
+        <input type="submit" value="Guardar" />
+      </form>
+    </main>
+  </body>
+</html>
