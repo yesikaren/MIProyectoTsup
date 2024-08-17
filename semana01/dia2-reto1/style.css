@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+/* font-family: "Figtree", sans-serif; */
+*{
+  box-sizing: border-box;
+}
 body{
   background-color: hsl(235, 18%, 26%);
   display: flex;
@@ -8,33 +13,74 @@ body{
 }
 
 main{
-  border: 1px solid green;
+ background-color: white;
   width: 600px;
   min-width:400px;
   display: flex;
   border-radius: 16px;
   overflow: hidden;
+  font-family: "Figtree", sans-serif;
   
 }
 .content{
-  border: 5px solid red;
+ 
   width: 350px;
   background-color: white;
   padding: 28px;
 
 }
 .content h1{
-
+  font-family: "Figtree", sans-serif;
+  font-size: 38px;
 }
 .content p{
-  
+  font-size:12px
+}
+
+.content li{
+  background: url(./assets/images/icon-list.svg) no-repeat left center;
+  padding-left: 25px;
+  list-style: none;
+  background-size: 15px;
+  font-size: 12px;
+  line-height: 25px;
+}
+.content ul{
+  display: flex;
+  flex-direction: column;
+  padding:0;
+}
+li::marker {
+  display: none;
+  font-size:20px; /* Puedes ajustar el tamaño del marcador */
+  vertical-align: middle; /* Para intentar centrar el marcador con el texto */
 }
 
 .box_img{
-  border: 5px solid blue;
-  width: 300px;
+ border-radius: 16px;
+  width: 250px;
+  height: 380px;
   background-image: url(./assets/images/illustration-sign-up-desktop.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 16px 16px 16px 0px;
   
+}
+form p{
+  margin-bottom: 5px;
+  font-weight:500;
+}
+
+form input{
+  width: 100%;
+  padding: 6px;
+}
+
+form button{
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  color: white;
+  background-color: hsl(0, 0%, 7%);
+  border-radius: 6px;
 }
