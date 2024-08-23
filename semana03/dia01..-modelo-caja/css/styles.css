@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+/* font-family: "Open Sans", sans-serif; */
+/* font-family: "Raleway", system-ui; */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  font-size: 14px;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(217, 28%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* UTILS */
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  /* width: 1000px; */
+  /* TODO:Adaptar el ancho de la pagina a dispositivos moviles */
+  width: min(100% - 3rem, 1440px);
+}
+/* SECCION header*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; /*centrado */
+  margin-top: 3rem;
+}
+.header__nav {
+  display: flex;
+  gap: 3rem;
+}
+/* SECCION hero*/
+.hero {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 12rem;
+  background-image: url(../images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url(../images/bg-curvy-mobile.svg);
+  }
+}
+.hero__title {
+  /* width: 720px; */
+  width: min(100% - 3rem, 720px);
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Raleway", system-ui;
+}
+
+.hero__text {
+  /* width: 720px; */
+  width: min(100% - 3rem, 720px);
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.hero__button {
+  font-weight: 700;
+  font-family: "Raleway", system-ui;
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  min-width: 220px;
+  background: linear-gradient(
+    90deg,
+    hsl(176, 68%, 64%) 0%,
+    hsl(198, 60%, 50%) 100%
+  );
+  color: hsl(0, 0%, 100%);
+  transition: all 1s ease;
+}
+.hero__button:hover {
+  background: linear-gradient(
+    90deg,
+    hsl(176, 68%, 64%) 35%,
+    hsl(198, 60%, 50%) 100%
+  );
+  cursor: pointer;
+}
+/* FEATURES SECTION */
+.features {
+  /* border: 1px solid blue; */
+  background-color: hsl(218, 28%, 13%);
+  display: grid;
+  grid-template-columns: 340px;
+  gap: 5rem;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: 340px 340px;
+  }
+}
+.feature {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Raleway", system-ui;
+}
+
+.feature__text {
+  text-align: center;
+}
+
+.feature__img {
+  height: 68px;
+}
+
+/* TODO: COLLABORATION SECTION- MAQUETAR ESTA SECCION TAREA */
+/* TESTIMONIAL SESION */
+.collaboration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: hsl(218, 28%, 13%);
+  padding-top: 8rem;
+}
+
+@media (min-width: 1200px) {
+  .collaboration {
+    flex-direction: row;
+  }
+}
+/* .collaboration img{
+  border: 1px solid red;
+
+} */
+.how_works {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: min(100% - 3rem, 480px);
+}
+.how_works__title {
+  font-family: "Raleway", system-ui;
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+.how_works__text {
+  font-family: "Open Sans", sans-serif;
+}
+.how_works__button {
+  color: hsl(176, 68%, 64%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  width: 10.8rem;
+  padding-bottom: 0.5rem;
+}
+
+
+.testimonials {
+  /* border: 1px solid red; */
+
+  background-color: hsl(218, 28%, 13%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  padding-top: 8rem;
+  padding-bottom: 18rem;
+}
+
+@media (min-width: 1200px) {
+  .testimonials {
+    flex-direction: row;
+  }
+}
+
+.testimonial {
+  width: 23rem; /* 23rem = 14px x 23 = 322px */
+  /* padding: TOP RIGHT BOTTOM LEFT; */
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.5rem solid hsla(215, 52%, 9%, 0.3);
+  background-color: hsl(219, 30%, 18%);
+}
+
+.testimonial__text {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.testimonial__profile {
+  display: flex;
+  gap: .5rem;
+
+  font-size: .9rem;
+}
+
+.testimonial__profile img {
+  border-radius: 50%;
+}
+
+.testimonial__profile h4 {
+  font-weight: 700;
+}
+
+.testimonial__profile h5 {
+  font-weight: 400;
+}
+
+.testimonial__profile__img{
+  height: 30px;
+  width: 30px;
+}
+/* EARLY-ACCESS SECTION */
+
+.early_access{
+  
+  width: min(100% - 3rem, 51rem);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: hsl(219, 30%, 18%);
+  border-radius: 1rem;
+  box-shadow: 3px 3px 10px #111;
+}
+.early_access h2{
+  font-size: 2rem;
+}
+.early_access p{
+  text-align: center;
+}
+.early_access form{
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.early_access input[type=text]{
+  border-radius: 1.5rem;
+  border: 0;
+  padding: 1rem 2rem;
+  width: min(100%, 30rem);
+}
+.early_access input[type=submit] {
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  color: hsl(0, 0%, 100%);
+  background: 
+    linear-gradient(
+      90deg, 
+      hsl(176, 68%, 64%) 0%, 
+      hsl(198, 60%, 50%) 100%
+    );
+  transition: all 1s ease;
+}
+.early_access input[type=submit]:hover {
+  background: 
+    linear-gradient(
+      90deg, 
+      hsl(176, 68%, 64%) 35%, 
+      hsl(198, 60%, 50%) 100%
+    );
+  cursor: pointer;
+}
+.footer{
+  position: relative;
+  padding: 15rem 0 5rem 0;
+
+  background-color: hsl(216, 53%, 9%) ;
+}
+
+.footer--wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: min(100% - 3rem, 76rem);
+  margin: 0 auto;
+
+}
+.footer_info{
+display: flex;
+gap: 4rem;
+
+width: 100%;
+justify-content: space-between;
+
+
+}
+@media (min-width: 1200px){
+  .footer_info{
+    flex-direction: row;
+  }
+}
+
+.footer_info__description{
+  width: 22rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.footer_info__contact{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+}
+.footer_info__span{
+  display: flex;
+  gap: 1.5rem;
+}
+.footer_info__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer_info__social{
+  display: flex;
+  gap: 1.5rem;
+}
+
+
+/* FOOTER SESION */

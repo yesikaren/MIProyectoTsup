@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mortgage repayment calculator</title>
-</head>
-<body>
-  Mortgage Calculator
-  Clear All
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage repayment calculator</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="main">
+      <section class="content">
+        <div class="titulo">
+          <h1>Mortgage Calculator</h1>
+          <p class="text__clear">Clear All</p>
+        </div>
+        <form class="formulario">
+          <p class="texto__morrgage">Mortgage Amount</p>
+          <div class="color__inferior">
+            <input class="input__moneda" type="text" placeholder="  £" />
+          </div>
+          <div class="input__years">
+           <div>
+              <p class="texto__morrgage">Mortgage Term</p>
+              <div class="caja_input_years"><input type="text" placeholder="years" /></div>
+           </div>
+            <div>
+              <p class="texto__morrgage">Interest Rate</p>
+              <div><input type="text" placeholder="%" /></div>
+            </div>
+          </div>
+          <div>
+            <p class="texto__morrgage">Mortgage Type</p>
+            <div class="">
+              <label>
+                <input type="radio" name="radio" id="" value="" />
+                Repayment
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="radio" id="" value="" />
+                Interest Only
+              </label>
+            </div>
+          </div>
+        </form>
+        <div>
+          <img src="./assets/images/icon-calculator.svg" alt="">
+          <p>Calculate Repayments</p>
+        </div>
+      </section>
+      <section class="box__img">
+       <div class="box__tex__img">
+          <img class="img" src="./assets/images/illustration-empty.svg" alt="">
+          <p class="text__titulo">Results shown here</p>
+          <p class="text__parrafo">Complete the form and click “calculate repayments” to see
+            what your monthly repayments would be.</p>
+       </div>
+      </section>
+    </main>
 
-  Mortgage Amount
+    
 
-  Mortgage Term
+    <!-- Empty results start -->
 
-  Interest Rate
+     
 
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
-
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
-</body>
+    <!-- Empty results end -->
+  </body>
 </html>
