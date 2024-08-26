@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* font-family: "Kumbh Sans", system-ui; */
+
+/* variables o custom properties */
+:root {
+  /* --mi-color:red;
+--mi-color2:#ddeeaa; */
+  --font-primary: "Kumbh Sans", system-ui;
+  --font-size: 16px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --primary-orange: hsl(26, 100%, 55%);
+  --primary-pale-orange: hsl(25, 100%, 94%);
+
+  --neutral-very-dark-blue: hsl(220, 13%, 13%);
+  --neutral-dark-grayish-blue: hsl(219, 9%, 45%);
+  --neutral-grayish-blue: hsl(220, 14%, 75%);
+  --neutral-light-grayish-blue: hsl(223, 64%, 98%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-black: hsl(0, 0%, 0%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: var(--font-primary);
+}
+body {
+  /* color: var(--mi-color2);
+background-color:var(--mi-color); */
+  font-family: var(--font-primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  width: min(100% - 3rem, 1200px);
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+
+.header {
+  border-bottom: 1px solid var(--neutral-grayish-blue);
+  height: 6.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  margin-bottom: 50px;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.header__links {
+  display: flex;
+  font-size: 0.8rem;
+  gap: 1rem;
+  color: var(--neutral-dark-grayish-blue);
+}
+
+.header__icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  padding: 0 2rem;
+  gap: 5rem;
+}
+
+.gallery__main {
+  border-radius: 12px;
+}
+.galerry_thumbnail {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  justify-content: space-between;
+}
+.gallery__item {
+  width: 22%;
+  border-radius: 8px;
+}
+.opacity {
+  opacity: 0.3;
+}
+.border {
+  border: 2px solid var(--primary-orange);
+  border-radius: 8px;
+}
+
+.product {
+  padding: 2.5rem 1.5rem;
+}
+
+.product__subtitle {
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--neutral-dark-grayish-blue);
+}
+
+.prouct__title {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-very-dark-blue);
+}
+
+.product__description {
+  color: var(--neutral-dark-grayish-blue);
+  line-height: 1.5;
+  margin-top: 1.5rem;
+}
+
+.product__price {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.product__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.product__amount {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-very-dark-blue);
+}
+.product__discount {
+  background-color: var(--neutral-very-dark-blue);
+  color: var(--neutral-white);
+
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-weight-bold);
+}
+.product__price-with-discount {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.product__form{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+.product__quantity {
+  
+
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product__quantity button,
+.product__quantity span{
+  width: 3rem;
+  height: 3.5rem;
+  border: none;
+  background-color: var(--neutral-light-grayish-blue);
+}
+.product__quantity span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--font-weight-bold);
+  font-size: 1.1rem;
+}
+
+.product__add-to-cart {
+  border: none;
+  padding: 1.1rem 1rem;
+  border-radius: .5rem;
+  background-color: var(--primary-orange);
+  color: var(--neutral-very-dark-blue);
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+}
+
+.product__add-to-cart svg path {
+  fill: var(--neutral-very-dark-blue);
+}

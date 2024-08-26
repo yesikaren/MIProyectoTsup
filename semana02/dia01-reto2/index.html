@@ -4,66 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mortgage repayment calculator</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main class="main"> nm
-      <section class="cont5wqaS<5TY6GZ<ent">
+    <main class="main">
+      <section class="box__Mortgage">
         <div class="titulo">
           <h1>Mortgage Calculator</h1>
           <p class="text__clear">Clear All</p>
         </div>
-        <form class="formulario">
-          <p class="texto__morrgage">Mortgage Amount</p>
-          <div class="color__inferior">
-            <input class="input__moneda" type="text" placeholder="  £" />
-          </div>
-          <div class="input__years">
-           <div>
-              <p class="texto__morrgage">Mortgage Term</p>
-              <div class="caja_input_years"><input type="text" placeholder="years" /></div>
-           </div>
-            <div>
-              <p class="texto__morrgage">Interest Rate</p>
-              <div><input type="text" placeholder="%" /></div>
+
+        <p class="texto__mortgage">Mortgage Amount</p>
+        <div class="box_amaunt">
+          <label>£</label>
+          <input type="text" />
+        </div>
+
+        <div class="box__term">
+          <div class="box__term1">
+            <p class="texto__mortgage">Mortgage Term</p>
+            <div class="box_amaunt">
+              <input type="text" />
+              <label>years</label>
             </div>
           </div>
           <div>
-            <p class="texto__morrgage">Mortgage Type</p>
-            <div class="">
-              <label>
-                <input type="radio" name="radio" id="" value="" />
-                Repayment
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="radio" id="" value="" />
-                Interest Only
-              </label>
+            <p class="texto__mortgage">Interest Rate</p>
+            <div class="box_amaunt">
+              <input type="text" />
+              <label>%</label>
             </div>
           </div>
-        </form>
+        </div>
+
+        <p class="texto__mortgage">Mortgage Type</p>
+        <div class="box__repayment">
+          <label>
+            <input type="radio" name="radio" id="" value="" />
+              Repayment
+          </label>
+        </div>
+
+        <div class="box__repayment">
+          <label>
+            <input type="radio" name="radio" id="" value="" />
+            Interest Only
+          </label>
+        </div>
+
         <div>
-          <img src="./assets/images/icon-calculator.svg" alt="">
+          <img src="./assets/images/icon-calculator.svg" alt="" />
           <p>Calculate Repayments</p>
         </div>
       </section>
       <section class="box__img">
-       <div class="box__tex__img">
-          <img class="img" src="./assets/images/illustration-empty.svg" alt="">
+        <div class="box__tex__img">
+          <img
+            class="img"
+            src="./assets/images/illustration-empty.svg"
+            alt=""
+            width="80px"
+          />
           <p class="text__titulo">Results shown here</p>
-          <p class="text__parrafo">Complete the form and click “calculate repayments” to see
-            what your monthly repayments would be.</p>
-       </div>
+          <p class="text__parrafo">
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+        </div>
       </section>
     </main>
 
-    
-
     <!-- Empty results start -->
-
-     
 
     <!-- Empty results end -->
   </body>
