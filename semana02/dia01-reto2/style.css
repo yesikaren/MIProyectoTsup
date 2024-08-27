@@ -15,13 +15,16 @@ body {
 }
 
 .main {
-  border: 3px solid red;
+  /* border: 3px solid red; */
   width: 600px;
   display: flex;
+  border-radius: 18px;
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
 }
 
 .box__Mortgage {
-  border: 2px solid rgb(0, 255, 115);
+  /* border: 2px solid rgb(0, 255, 115); */
   width: 300px;
   padding: 20px;
   background-color: hsl(0, 0%, 100%);
@@ -33,7 +36,7 @@ body {
   justify-content: space-between;
 }
 .titulo h1 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 .titulo p {
@@ -47,35 +50,34 @@ body {
   margin-top: 16px;
   margin-bottom: 4px;
 }
-.box_amaunt{
-  border: 1px solid gray;
-  border-radius:4px ;
+.box_amaunt {
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 4px;
   display: flex;
   overflow: hidden;
-  color: hsl(200, 24%, 40%);  
-
+  color: hsl(200, 24%, 40%);
+  height: 25px;
 }
-.box_amaunt input{
+.box_amaunt input {
   width: 100%;
   border: none;
-  
 }
-.box_amaunt label{
+.box_amaunt label {
   width: 50px;
-  height: 20px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 10px;
   background-color: hsl(202, 86%, 94%);
 }
-.box__term{
+.box__term {
   display: flex;
   gap: 10px;
 }
-.box__repayment{
+.box__repayment {
   height: 20px;
-  border: 1px solid gray;
+  border: 1px solid hsl(200, 24%, 40%);
   border-radius: 4px;
   color: hsl(200, 24%, 40%);
   font-size: 12px;
@@ -85,14 +87,47 @@ body {
   padding: 14px 8px;
   margin-bottom: 8px;
 }
-.box__repayment label{
+.box__repayment label {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+.boton__calculate {
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  padding: 6px;
+  width: 75%;
+  background-color: hsl(61, 70%, 52%);
+  margin-top: 16px;
+  gap: 6px;
+}
 
 .box__img {
-  border: 2px solid rgb(64, 0, 255);
+  /* border: 2px solid rgb(64, 0, 255); */
   width: 300px;
+  border-radius: 0px 16px 16px 40px;
+  background-color: hsl(202, 55%, 16%);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box__tex__img {
+  /* border: 1px solid red; */
+  width: 95%;
+  text-align: center;
+  font-size: 16px;
+}
+.text__parrafo {
+  font-size: 10px;
+  margin-top: 14px;
+  line-height: 1.5;
+  color: hsl(200, 24%, 40%);
+  font-weight: bolder;
 }
