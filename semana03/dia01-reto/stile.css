@@ -122,6 +122,12 @@
     width: 90%;
   }
 }
+.box__segundo__mobil {
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .box__segundo__descripcion {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
@@ -165,18 +171,6 @@
   font-family: "Open Sans", sans-serif;
   margin-top: 20px;
 }
-.footer {
-  background-color: hsl(192, 100%, 9%);
-  position: relative;
-  margin-top: 200px;
-  width: 100%;
-  height: 500px;
-
-  @media (max-width: 768px) {
-    height: 100%;
-  }
-}
-
 .box__community {
   width: 600px;
   margin: auto;
@@ -186,17 +180,26 @@
   padding: 50px;
   box-shadow: 2px 5px 10px 0 rgba(174, 173, 173, 0.5);
   border-radius: 20px;
-
   position: absolute;
-
   background-color: white;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-
   @media (max-width: 768px) {
   }
 }
+.footer {
+  background-color: hsl(192, 100%, 9%);
+  position: relative;
+  margin-top: 200px;
+  width: 100%;
+  height: 500px;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
+}
+
+
 .box__footer {
   display: flex;
   justify-content: space-around;
@@ -205,14 +208,8 @@
   font-family: "Open Sans", sans-serif;
   @media (max-width: 768px) {
     flex-direction: column;
-   
-    
   }
 }
-.box__footer__parrafo{
-  
-}
-
 .footer__logo {
   margin-top: 150px;
   margin-bottom: 40px;
@@ -221,7 +218,6 @@
     margin-top: 120px;
     margin-bottom: 35px;
     margin-left: 22px;
-    
   }
 }
 .box__footer__contacto {
@@ -231,9 +227,8 @@
   width: 18%;
   gap: 25px;
   @media (max-width: 768px) {
-width: 74%;
-font-size: 24px;
-
+    width: 74%;
+    font-size: 24px;
   }
 }
 .box__footer__ubicacion {
@@ -242,7 +237,6 @@ font-size: 24px;
   align-items: start;
   gap: 20px;
   @media (max-width: 768px) {
-
   }
 }
 .box__footer__telefono {
@@ -282,19 +276,13 @@ font-size: 24px;
   justify-content: flex-end;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
-  margin-top: 50px;
+  margin-top: 20px;
+ 
   @media (max-width: 768px) {
     display: flex;
-   justify-content: center;
-   align-items: center;
-   padding-bottom: 60px;
-   font-size: 18px;
-
-  }
-}
-.mobil {
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+    font-size: 18px;
   }
 }
