@@ -180,3 +180,45 @@ function contarOvejas(ovejas) {
 const ovejasFiltradas = contarOvejas(ovejas)
 
 console.log(ovejasFiltradas)
+
+
+// para mejorar la productividad de la tienda en la que trabajamos, vamos a crear una pequeña que  "calcula el minimo numero de monedas que debemos usar para dar el cambio de una compra en metalico".
+// las monedas para cambio que puedes usar son estas:
+
+// coins[0] = 1 centimo
+// coins[1] = 2 centimo
+// coins[2] = 5 centimo
+// coins[3] = 10 centimo
+// coins[4] = 20 centimo
+// coins[5] = 50 centimo
+// tenemos que crear una función que recibe el numero de centimos que hay que devolveral cliente y la funcion nos da  un array con la combinacion de monedas minimas que demos usar para conseguirlo
+
+
+function vuelto(monto){
+// de 50 
+let cant=[0,0,0,0,0]; 
+cant[5]= Math.trunc(monto/50);
+monto = monto - (cant[5]*50);
+cant[4]= Math.trunc(monto/20);
+monto = monto - (cant[5]*20);
+cant[3]= Math.trunc(monto/10);
+monto = monto - (cant[5]*10);
+cant[2]= Math.trunc(monto/5);
+
+monto = monto - (cant[5]*5);
+cant[1]= Math.trunc(monto/2); 
+monto = monto - (cant[5]*2);
+cant[1]= Math.trunc(monto/1); 
+
+
+
+return cant; 
+}
+
+let valor=vuelto(87);
+console.log("de 50 centimos :" +valor[5]);
+console.log("de 20 centimos :" +valor[4]);
+console.log("de 10 centimos :" +valor[3]);
+console.log("de 5 centimos :" +valor[2]);
+console.log("de 2 centimos :" +valor[1]);
+console.log("de 21centimos :" +valor[0]);

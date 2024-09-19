@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS KEY DETECT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex items-center">
+    <main class="container mx-auto border-4 border-red-600 w-80 bg-yellow-300 p-5 rounded-lg flex flex-col items-center gap-5">
+      <h1 class="text-2xl">JS key Detect</h1>
+      <section id="keycode" class="bg-red-400 w-16 h-16 rounded-full flex justify-center items-center text-white text-4xl">00</section>
+      <section id="character" class="bg-red-500 w-16 h-16 flex justify-center items-center text-4xl text-white">b</section>
+    </main>
+    <script>
+      const keyCode = document.querySelector('#keycode')
+      const character = document.querySelector('#character')
+      console.log({keyCode, character})
+      document.addEventListener('keydown', (event)=>{
+        console.log(event)
+        keyCode.textContent = event.keyCode
+        character.textContent = event.key
+      })
+    </script>
+</body>
+</html>
