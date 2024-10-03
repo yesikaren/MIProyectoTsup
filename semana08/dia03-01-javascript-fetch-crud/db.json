@@ -103,6 +103,14 @@
       "estreno": "2023-04-05",
       "generoId": 3,
       "resumen": "Resumen de prueba"
+    },
+    {
+      "id": "6d24",
+      "nombre": "Karen La Pelicula",
+      "imagen": "https://www.ifomo.es/media/ifomocantabria/images/2017/10/26/1003.jpg",
+      "estreno": "2024-10-02",
+      "generoId": "4",
+      "resumen": "Las aventuras de las garras de Karen"
     }
   ]
 }

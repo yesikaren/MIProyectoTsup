@@ -1,0 +1,17 @@
+GET http://localhost:3000/peliculas
+
+### crear pelicula
+POST http://localhost:3000/peliculas
+Content-Type: application/json
+
+{
+  "nombre":"Ejemplo",
+  "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDokeUV_QMfHbKxGLYTkAQrL3G9y4FGc10LA&s",
+  "estreno":"2024-10-02",
+  "generoId":1,
+  "resumen":"resumen de mi pelicula de ejemplo"
+}
+
+### Eliminar una pelicula
+
+DELETE http://localhost:3000/peliculas/3b02
