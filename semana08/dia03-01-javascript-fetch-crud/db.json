@@ -16,19 +16,19 @@
   "generos": [
     {
       "id": "1",
-      "nombre": "Comedy"
+      "nombre": "Comedia"
     },
     {
       "id": "2",
-      "nombre": "Action"
+      "nombre": "Acción"
     },
     {
       "id": "3",
-      "nombre": "Animation"
+      "nombre": "Animación"
     },
     {
       "id": "4",
-      "nombre": "Adventure"
+      "nombre": "Aventura"
     }
   ],
   "peliculas": [
