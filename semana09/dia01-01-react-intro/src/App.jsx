@@ -1,33 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+/* 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>hola react</h1>
+    </>
+  )
+}
+
+export default App
+ */
+// const Saludo = ()=>{
+//   return <h4>hola karen</h4>
+// }
+// const Despedida = ()=>{
+//   return <h4>Chauu karen</h4>
+
+import Despedida from "./components/Despedida"
+import Saludo from "./components/Saludo"
+import { listaFrutas, nombres } from "./frutas"
+
+// }
+const App = () => {
+  const karencita = 'gatita bonita negrita'
+  return (
+    <>
+      <Saludo/>
+      <h3>mensje App {karencita}</h3>
+      <h2>otro {listaFrutas.join(", ")}</h2>
+      <Despedida/>
+      {1+2}
+      <h5>{nombres.join(', ')}</h5>
     </>
   )
 }
