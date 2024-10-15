@@ -13,7 +13,7 @@ const data = [
 ];
 
 const App = () => {
-  const [estudiantes, setEstudiantes] = useState(data);
+  const [estudiantes, setEstudiantes] = useState(JSON.parse(localStorage.getItem('Estudiantes'))||[]);
   const [nombre, setNombre] = useState("");
   const [ciudad, setCiudad] = useState("");
   const [idEstudiante, setIdEstudiente] = useState("");
@@ -21,6 +21,7 @@ const borrar = (borrarEstudiante)=>{
   console.log('borrar')
   const arregloModificado = estudiantes.filter((estudiante)=>estudiante.id !== borrarEstudiante.id)
   setEstudiantes(arregloModificado)
+  localStorage.setItem('Estudiantes',JSON.stringify(arregloModificado))
 }
 
   const EditarActualizar = (actualizarEstudiante) => {
@@ -39,7 +40,10 @@ const borrar = (borrarEstudiante)=>{
         ciudad: ciudad,
       };
       console.log(nuevoEtudiante);
-      setEstudiantes([...estudiantes, nuevoEtudiante]);
+      const estudianteNuevos = [...estudiantes, nuevoEtudiante]
+      setEstudiantes(estudianteNuevos);
+     
+      localStorage.setItem('Estudiantes',JSON.stringify(estudianteNuevos))
     }
     else{
       const arregloActualizar = estudiantes.map((estudiante)=>{
@@ -53,6 +57,7 @@ const borrar = (borrarEstudiante)=>{
         return estudiante        
       })
       setEstudiantes(arregloActualizar)
+      localStorage.setItem('Estudiantes',JSON.stringify(arregloActualizar))
     }
     setNombre('')
     setCiudad('')
