@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { crearEstudiante, deleteEstudiante, getEstudiantes, updateEstudiante } from "./services";
 const data = [
   {
     id: 1,
@@ -11,19 +12,31 @@ const data = [
     ciudad: "Arequipa",
   },
 ];
-
 const App = () => {
   const [estudiantes, setEstudiantes] = useState(JSON.parse(localStorage.getItem('Estudiantes'))||[]);
   const [nombre, setNombre] = useState("");
   const [ciudad, setCiudad] = useState("");
   const [idEstudiante, setIdEstudiente] = useState("");
-const borrar = (borrarEstudiante)=>{
+
+  const leerEstudiantes = async()=>{
+    const data =  await getEstudiantes()
+    setEstudiantes(data)
+  }
+  useEffect(()=>{
+    leerEstudiantes()
+  },[])
+
+const borrar = async(borrarEstudiante)=>{
   console.log('borrar')
   const arregloModificado = estudiantes.filter((estudiante)=>estudiante.id !== borrarEstudiante.id)
-  setEstudiantes(arregloModificado)
-  localStorage.setItem('Estudiantes',JSON.stringify(arregloModificado))
-}
 
+  const respuesta = await deleteEstudiante(borrarEstudiante.id)
+  if(respuesta){
+
+    setEstudiantes(arregloModificado)
+    localStorage.setItem('Estudiantes',JSON.stringify(arregloModificado))
+  }
+}
   const EditarActualizar = (actualizarEstudiante) => {
     console.log("editar");
     setNombre(actualizarEstudiante.nombre);
@@ -31,7 +44,7 @@ const borrar = (borrarEstudiante)=>{
     setIdEstudiente(actualizarEstudiante.id);
   };
 
-  const guardarEstudiante = (event) => {
+  const guardarEstudiante = async(event) => {
     event.preventDefault();
     if (idEstudiante == "") {
       const nuevoEtudiante = {
@@ -40,24 +53,30 @@ const borrar = (borrarEstudiante)=>{
         ciudad: ciudad,
       };
       console.log(nuevoEtudiante);
-      const estudianteNuevos = [...estudiantes, nuevoEtudiante]
-      setEstudiantes(estudianteNuevos);
-     
-      localStorage.setItem('Estudiantes',JSON.stringify(estudianteNuevos))
+      const respuesta = await crearEstudiante(nuevoEtudiante)
+      if(respuesta){
+        const estudianteNuevos = [...estudiantes, nuevoEtudiante]
+        setEstudiantes(estudianteNuevos);       
+        localStorage.setItem('Estudiantes',JSON.stringify(estudianteNuevos))
+      }
     }
     else{
+      const estudianteActualizar = {
+        nombre:nombre,
+        ciudad:ciudad
+      }
       const arregloActualizar = estudiantes.map((estudiante)=>{
         if(estudiante.id == idEstudiante){
-          const estudianteActualizar = {
-            nombre:nombre,
-            ciudad:ciudad
-          }
           return {...estudiante, ...estudianteActualizar}
         }
         return estudiante        
       })
-      setEstudiantes(arregloActualizar)
-      localStorage.setItem('Estudiantes',JSON.stringify(arregloActualizar))
+      const respuesta = await updateEstudiante(estudianteActualizar,idEstudiante)
+      if(respuesta){
+        setEstudiantes(arregloActualizar)
+        localStorage.setItem('Estudiantes',JSON.stringify(arregloActualizar))
+
+      }
     }
     setNombre('')
     setCiudad('')
