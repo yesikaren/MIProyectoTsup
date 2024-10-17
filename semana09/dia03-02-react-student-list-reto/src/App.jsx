@@ -31,11 +31,12 @@ const borrar = async(borrarEstudiante)=>{
   const arregloModificado = estudiantes.filter((estudiante)=>estudiante.id !== borrarEstudiante.id)
 
   const respuesta = await deleteEstudiante(borrarEstudiante.id)
-  if(respuesta){
+  leerEstudiantes()
+  /* if(respuesta){
 
     setEstudiantes(arregloModificado)
     localStorage.setItem('Estudiantes',JSON.stringify(arregloModificado))
-  }
+  } */
 }
   const EditarActualizar = (actualizarEstudiante) => {
     console.log("editar");
@@ -54,11 +55,7 @@ const borrar = async(borrarEstudiante)=>{
       };
       console.log(nuevoEtudiante);
       const respuesta = await crearEstudiante(nuevoEtudiante)
-      if(respuesta){
-        const estudianteNuevos = [...estudiantes, nuevoEtudiante]
-        setEstudiantes(estudianteNuevos);       
-        localStorage.setItem('Estudiantes',JSON.stringify(estudianteNuevos))
-      }
+      leerEstudiantes()
     }
     else{
       const estudianteActualizar = {
@@ -72,11 +69,12 @@ const borrar = async(borrarEstudiante)=>{
         return estudiante        
       })
       const respuesta = await updateEstudiante(estudianteActualizar,idEstudiante)
-      if(respuesta){
+      leerEstudiantes()
+      /* if(respuesta){
         setEstudiantes(arregloActualizar)
         localStorage.setItem('Estudiantes',JSON.stringify(arregloActualizar))
 
-      }
+      } */
     }
     setNombre('')
     setCiudad('')
